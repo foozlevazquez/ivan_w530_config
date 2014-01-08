@@ -1,0 +1,8 @@
+#!/bin/bash
+
+case "$1" in
+    resume)
+        pacmd set-sink-volume alsa_output.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00-CODEC.analog-stereo 0x10000
+        pacmd set-sink-mute alsa_output.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00-CODEC.analog-stereo no
+        echo 'resuming w 5 3 0' | espeak -a 200
+esac
